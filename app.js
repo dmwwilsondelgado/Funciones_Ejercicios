@@ -69,3 +69,37 @@ const filtrarPostsPorNombre = async (URL, nombre) => {
 
   console.log(postsWithComments);
 };
+
+const menuInteractivo = async () => {
+  console.log("Seleccione una opción:");
+  console.log("1. Listar tareas pendientes");
+  console.log("2. Buscar por nombre de usuario");
+  console.log("3. Filtrar posts por nombre");
+  console.log("4. Consultar usuarios con nombre y teléfono");
+  console.log("5. Solicitar usuarios con todos sus datos");
+
+  const opcion = prompt("Ingrese el número de la opción:");
+
+  switch (opcion) {
+    case "1":
+      manejarDatos(); // Implementa la lógica correspondiente
+      break;
+    case "2":
+      obtenerUsername(URL, prompt("Ingrese el username:"));
+      break;
+    case "3":
+      filtrarPostsPorNombre(URL, prompt("Ingrese el nombre:"));
+      break;
+    case "4":
+      console.log(await getUsersWithPhone(URL));
+      break;
+    case "5":
+      manejarDatos();
+      break;
+    default:
+      console.log("Opción inválida");
+      break;
+  }
+};
+
+menuInteractivo();
