@@ -25,3 +25,12 @@ manejardatos().then((data)=>{
     console.log(data[0]);
 });
 
+
+
+const compani = async () => {
+    const album = await getAlbunes(URL);
+}
+
+mostrarAlbunes = async (album) => {
+    //aca desarrollar
+}
