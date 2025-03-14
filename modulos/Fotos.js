@@ -1,5 +1,5 @@
 import solicitud from "./solicitud";
 
-export const getPhotos = async (URL, album) => {
-    return await solicitud(`${URL}/photos?albumId=${album.id}`);
+export const getPhotos = async (URL,photos) => {
+    return await solicitud(`${URL}/photos?albumId=${photos.id}`);
 }

@@ -21,11 +21,16 @@ const manejardatos = async () => { // creamos una funcion asicrona que  no recib
             const coments = await getCommets(URL,post);// declaramos una variable const que va a recibir el resultado de la funcion getComments 
             return {...post,coments};// retornamo un objeto que va a tener las propiedade de post y coments 
         })); // ciere
-        return {...usuario,comentPost,getAlbum}; // retornamos un objeto que va a tener las propiedades de usuario y comentPost
+        return {...usuario,comentPost,getAlbum}; // retornamos un objeto que va a tener las propiedades de usuario y comentPost y album
     }));// ciere de la promesa retornando un arreglo de usuarios con sus respectivos comentarios
 };
 manejardatos().then((data)=>{// llamamos a la funcion manejardatos y le pasamos un parametro que es una funcion que recibe un arreglo de datos
     console.log(data[0]);// mostramos en consola el primer elemento del arreglo de datos
 });// cierre de la funcion manejardatos
 
+
+
+const obtengousername = async (URL,usuario) => {
+    
+} // creamos una funcion asincrona que recibe dos parametros URL y usuario
 
